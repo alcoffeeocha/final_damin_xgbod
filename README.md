@@ -1,2 +1,4 @@
 # final_damin
-tugas besar data mining : mengimplementasikan kembali paper "XGBOD : Improving Supervised Outlier Detection with Unsupervised Representation Learning" oleh Yue Zhao dan Maciej K. Hryniewicki
+Tugas besar data mining : mengimplementasikan kembali paper "XGBOD : Improving Supervised Outlier Detection with Unsupervised Representation Learning" karya Yue Zhao dan Maciej K. Hryniewicki
+
+Eksekusi file "xgbod_damin.py" untuk menjalankan program
