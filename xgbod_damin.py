@@ -64,7 +64,7 @@ roc_list = roc_knn + roc_loop + roc_lof
 print_baseline(X_train_new_orig, y, roc_list)
 ##############################################################################
 # TOS selection, dengan beberapa metode
-jum = 30  # Jumlah TOS yang diselect
+jum = 5  # Jumlah TOS yang diselect
 
 # random selection
 new_rand_trainX, all_rand_trainX = random_select(X, X_train_new_orig, roc_list, jum)
@@ -92,13 +92,13 @@ for i in range(iterasi):
     ori_len = X.shape[1]
     
     #menggunakan semua TOS
-    #trainX, testX, train_y, test_y = train_test_split(X_train_all_orig, y, test_size=ukuran_tes)
+    trainX, testX, train_y, test_y = train_test_split(X_train_all_orig, y, test_size=ukuran_tes)
     # Menggunakan random selection
     #trainX, testX, train_y, test_y = train_test_split(all_rand_trainX, y, test_size=ukuran_tes)
     # Menggunakan accurate selection
     #trainX, testX, train_y, test_y = train_test_split(all_accu_trainX, y, test_size=ukuran_tes)
     # Menggunakan balance selection
-    trainX, testX, train_y, test_y = train_test_split(all_bal_trainX, y, test_size=ukuran_tes)
+    #trainX, testX, train_y, test_y = train_test_split(all_bal_trainX, y, test_size=ukuran_tes)
     # Memakai original feature
     trainX_o = trainX[:, 0:ori_len]
     testX_o = testX[:, 0:ori_len]
